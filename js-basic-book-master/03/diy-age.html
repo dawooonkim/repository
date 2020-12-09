@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>나이 계산하기</title>
+	<link rel="stylesheet" href="css/age.css">
+</head>
+<body>
+	<button class="btn" onclick="calc()">나이 계산하기</button>
+	<div id="result" class="show">(결과 값 표시)</div>
+	<script>
+		function calc() {
+			var thisYear = 2020
+			var birthYear = prompt("당신의 출생연도를 입력하세요", "yyyy");
+			var age = thisYear - birthYear + 1;
+			alert("당신의 나이는 " + age + "살입니다.");
+		}
+	</script>
+</body>
+</html>
