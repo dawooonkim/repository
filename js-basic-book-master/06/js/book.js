@@ -14,5 +14,5 @@ var bookList = [firstPersonalProj, secondPersonalProj, thirdPersonalProj];
 
 document.write("<h1>책 가격을 확인하기</h1>");
 for(var i=0; i<bookList.length; i++) {
-    document.write("<p>" + bookList[i].price + "원</p>");
+    document.write("<p>" + bookList[i].fdf + "원</p>");
 }
