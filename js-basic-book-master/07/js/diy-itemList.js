@@ -56,18 +56,13 @@ function showList(){
 	document.querySelector('#itemList').innerHTML = list;
 	console.log("10.     전체 리스트를 화면에 그림");
 
-	var remove = document.querySelectorAll('.close'); //모든 삭제버튼을 쿼리셀렉터로 가져옴
-	// 삭제버튼을 눌렀을때, 그삭제버튼의 id값을 알아냄.
-	for (var i = 0; i < remove.length; i++){
+	var remove = document.querySelectorAll('.close');
+	for(var i = 0; i < remove.length; i++){
 		remove[i].addEventListener('click', removeList);
 	}
 }
 
-
-
 // 삭제 버튼을 눌렀을때 실행할 함수
 function removeList(){
-	var id = this.getAttribute("id");
-	itemList.splice(id, 1);
-	showList()
+
 }
