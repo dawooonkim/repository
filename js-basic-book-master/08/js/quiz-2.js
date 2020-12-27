@@ -1,6 +1,13 @@
 var check = document.querySelectorAll(".check");
+var isDone = false;
 for(var i = 0; i<check.length; i++){
     check[i].addEventListener("click", function(){
-        this.parentNode.style.color = "#ccc";
+        if(isDone === false){
+            this.parentNode.style.color = "#ccc";
+            isDone = true;
+        } else {
+            this.parentNode.style.color = "black";
+            isDone = false;
+        }
     })
 }
