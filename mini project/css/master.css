@@ -1,0 +1,19 @@
+.container {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+}
+h1, p {
+    text-align: center;
+}
+.answer {
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+.answer:hover {
+    cursor: pointer;
+    background-color: rgba(0,0,0,0.05);
+    transition: background-color 0.5s;
+}
