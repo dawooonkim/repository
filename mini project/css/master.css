@@ -4,6 +4,9 @@
     margin-right: auto;
     padding-top: 20px;
 }
+.container article[class^=session] {
+    display: none;
+}
 h1, p {
     text-align: center;
 }
