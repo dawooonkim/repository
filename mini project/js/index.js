@@ -1,9 +1,11 @@
-var se1 = document.querySelector('.session-1');
-var se2 = document.querySelector('.session-2');
+var quiz = document.querySelectorAll("[class^='session']");
 var answer = document.querySelectorAll('.answer');
 
-se1.style.display = 'block';
-answer[0].addEventListener('click', function(){
-    se1.style.display = 'none';
-    se2.style.display = 'block';
-});
+quiz[0].style.display = 'block';
+
+
+// se1.style.display = 'block';
+// answer[0].addEventListener('click', function(){
+//     se1.style.display = 'none';
+//     se2.style.display = 'block';
+// });
