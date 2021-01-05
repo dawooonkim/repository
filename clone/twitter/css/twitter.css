@@ -1,5 +1,6 @@
 body {
     background-color: rgba(21,32,43);
+    color: rgba(255,255,255);
 }
 .d-flex {
     display: flex;
@@ -8,12 +9,57 @@ body {
     flex-grow: 1;
     align-items: flex-end;
 }
+.menu-left-inner {
+    width: 275px;
+}
+.tab {
+    display: flex;
+}
+.menu-left a {
+    outline-style: none;
+    align-items: flex-start;
+    font-size: 19px;
+    font-weight: 700;
+    color: rgba(255,255,255);
+    text-decoration: none;
+}
+.btn-twit {
+    width: 90%;
+}
+.btn-twit a {
+    display: flex;
+    background-color: rgb(29, 161, 242);
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 8px 28px;
+    min-height: 49px;
+    min-width: calc(78.89px);
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 9999px;
+    align-items: stretch;
+}
+.btn-twit > a > div {
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
 .main {
-    max-width: 990px;
+    display: flex;
     align-items: flex-start;
     flex-shrink: 1;
     flex-grow: 1;
 }
+.main-inner {
+    display: flex;
+    flex-basis: auto;
+    max-width: 990px;
+}
+.timeline {
+    max-width: 600px;
+}
+.sidebar {
+    width: 350px;
+}
 svg {
     height: 1.75rem;
+    color: rgba(255,255,255,100);
 }
