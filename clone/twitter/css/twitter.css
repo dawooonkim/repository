@@ -1,18 +1,42 @@
 body {
     background-color: rgba(21,32,43);
     color: rgba(255,255,255);
+    margin: 0;
 }
 .d-flex {
     display: flex;
 }
+.menu {
+    height: 100%;
+    overflow-y: scroll;
+}
+.sswer {
+    flex-grow: 3;
+    align-items: flex-end;
+    z-index: 3;
+    display: flex;
+    flex-basis: auto;
+    flex-direction: column;
+    flex-shrink: 0;
+    min-width: 316px;
+    position: relative;
+    z-index: 0;
+}
+.sdlfkjsd {
+    height: 100%;
+    position: fixed;
+    top: 0;
+}
 .menu-left {
+    height: 100%;
+    width: 275px;
     flex-grow: 1;
     align-items: flex-end;
-}
-.menu-left-inner {
-    width: 275px;
+    border-right: 1px solid rgba(255, 255, 255, .1);
+    padding: 20px;
 }
 .tab {
+    padding: 10px;
     display: flex;
 }
 .menu-left a {
@@ -24,7 +48,7 @@ body {
     text-decoration: none;
 }
 .btn-twit {
-    width: 90%;
+    min-width: calc(78.89px);
 }
 .btn-twit a {
     display: flex;
@@ -38,9 +62,8 @@ body {
     align-items: stretch;
 }
 .btn-twit > a > div {
-    justify-content: center;
     align-items: center;
-    align-content: center;
+    margin: 0 auto;
 }
 .main {
     display: flex;
@@ -48,16 +71,40 @@ body {
     flex-shrink: 1;
     flex-grow: 1;
 }
+.titlebar {
+    height: 57px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+    background-color: rgba(21,32,43);
+}
+.titlebar > div {
+    padding: 20px;
+}
 .main-inner {
     display: flex;
     flex-basis: auto;
     max-width: 990px;
+    height: 100%;
 }
 .timeline {
     max-width: 600px;
+    border-right: 1px solid rgba(255, 255, 255, .1);
+    -ms-overflow-style: none;
+    overflow-y: scroll;
+}
+.timeline::-webkit-scrollbar {
+     display:none;
+ }
+
+.timeline-content {
+    padding: 20px;
 }
 .sidebar {
     width: 350px;
+    padding: 20px;
 }
 svg {
     height: 1.75rem;
