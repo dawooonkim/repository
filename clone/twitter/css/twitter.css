@@ -89,6 +89,8 @@ body {
     max-width: 990px;
     height: 100%;
 }
+
+
 .timeline {
     max-width: 600px;
     border-right: 1px solid rgba(255, 255, 255, .1);
@@ -98,6 +100,22 @@ body {
 .timeline::-webkit-scrollbar {
      display:none;
  }
+
+.generate-twit {
+    height: 120px;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+}
+#write-twit {
+    height: 24px;
+    background-color: rgba(21,32,43);
+    border: none;
+    color: white;
+    font-size: 19px;
+    margin: 16px;
+}
+#write-twit:focus {
+    outline: none;
+}
 
 .timeline-content {
     padding: 20px;
