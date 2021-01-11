@@ -15,13 +15,13 @@ function createTwit() {
         var newNickname = document.createElement("div");
         var userNickname = document.createTextNode("userName");
 
-
         var generateUnix = Date.now();
-        var generateTime = (generateUnix * 1000);
-        generateTime.getHours();
+        var generateTime = new Date(generateUnix);
+        var hour = generateTime.getHours();
+        var min = generateTime.getMinutes();
+        var sec = generateTime.getSeconds();
 
-        var timeInner = document.createTextNode(generateTime);
-
+        var timeInner = document.createTextNode("· "+hour+"시 "+min+"분 "+sec+"초에 작성");
         var twitBody = document.createElement("div");
         var time = document.createElement("div");
 
@@ -32,6 +32,7 @@ function createTwit() {
         twitBody.classList.add('flex-column', 'd-flex');
         newProfile.classList.add('user-profile');
         newNickname.classList.add('user-nickname');
+        time.classList.add('time')
 
         time.appendChild(timeInner);
         newNickname.appendChild(userNickname);
