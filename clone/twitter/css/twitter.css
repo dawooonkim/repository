@@ -6,6 +6,9 @@ body {
 .d-flex {
     display: flex;
 }
+.flex-column {
+    flex-direction: column;
+}
 .menu {
     height: 100%;
     overflow-y: scroll;
@@ -102,21 +105,29 @@ body {
  }
 
 .generate-twit {
+    position: relative;
     height: 120px;
     border-bottom: 1px solid rgba(255, 255, 255, .1);
+    padding: 20px;
 }
-#twit-content {
+#input-twit {
     height: 24px;
+    width: 100%;
     background-color: rgba(21,32,43);
     border: none;
     color: white;
     font-size: 19px;
-    margin: 16px;
+    display: block;
 }
-#twit-content:focus {
+#input-twit:focus {
     outline: none;
 }
 #btn-create-twit {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+margin: 0 20px 20px 0;
     background-color: rgb(29, 161, 242);
     width: 68px;
     padding: 10px;
@@ -135,6 +146,26 @@ body {
 .single-twit {
     border-bottom: 1px solid rgba(255, 255, 255, .1);
     padding: 20px;
+    display: flex;
+}
+
+.single-twit:hover {
+    background-color: rgba(255,255,255,.05);
+    transition: background-color .2s ease-in-out;
+    cursor: pointer;
+}
+
+.user-nickname {
+    font-weight: 700;
+    margin-bottom: 4px;
+    margin-right: 16px;
+}
+
+.user-profile {
+    width: 36px;
+    height: 36px;
+    border-radius: 9999px;
+    margin-right: 16px;
 }
 
 .sidebar {
