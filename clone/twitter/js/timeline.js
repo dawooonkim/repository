@@ -8,12 +8,17 @@ btnCreateTwit.addEventListener('click', createTwit);
 
 function createTwit() {
     if(inputTwit.value.length > 0){
+        timeLine.style.display = "block";
+        document.querySelector(".timeline-empty").style.display = "none";
         var newDiv = document.createElement("div");
         var userContent = document.createTextNode(inputTwit.value);
         var newContent = document.createElement("div")
         var newProfile = document.createElement("img");
         var newNickname = document.createElement("div");
         var userNickname = document.createTextNode("userName");
+        var metaData = document.createElement("div");
+        var btnDelete = document.createElement("span");
+        var times = document.createTextNode("X");
 
         var generateUnix = Date.now();
         var generateTime = new Date(generateUnix);
@@ -23,8 +28,7 @@ function createTwit() {
 
         var timeInner = document.createTextNode("· "+hour+"시 "+min+"분 "+sec+"초에 작성");
         var twitBody = document.createElement("div");
-        var time = document.createElement("div");
-
+        var time = document.createElement("span");
 
         newProfile.setAttribute('src', 'img/profile.png');
 
@@ -33,16 +37,25 @@ function createTwit() {
         newProfile.classList.add('user-profile');
         newNickname.classList.add('user-nickname');
         time.classList.add('time')
+        metaData.classList.add('d-flex');
 
+        btnDelete.appendChild(times);
         time.appendChild(timeInner);
         newNickname.appendChild(userNickname);
         newContent.appendChild(userContent);
-        twitBody.appendChild(newNickname);
+        metaData.appendChild(newNickname);
+        metaData.appendChild(time);
+        metaData.appendChild(btnDelete);
+        twitBody.appendChild(metaData);
         twitBody.appendChild(newContent);
+
         newDiv.appendChild(newProfile);
         newDiv.appendChild(twitBody);
-        newDiv.appendChild(time);
         timeLine.appendChild(newDiv);
+
+        btnDelete.addEventListener("click",function(){
+            this.parentNode.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode.parentNode);
+        })
 
         inputTwit.value = "";
     } else {
