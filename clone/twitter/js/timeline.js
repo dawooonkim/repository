@@ -1,4 +1,4 @@
-var btnCreateTwit = document.querySelector('#btn-create-twit');
+var btnCreateTwit = document.querySelector('.btn-create-twit');
 var inputTwit = document.querySelector('#input-twit');
 var timeLine = document.querySelector('.timeline-content');
 
@@ -28,7 +28,7 @@ function createTwit() {
 
         var timeInner = document.createTextNode("· "+hour+"시 "+min+"분 "+sec+"초에 작성");
         var twitBody = document.createElement("div");
-        var time = document.createElement("span");
+        var time = document.createElement("div");
 
         newProfile.setAttribute('src', 'img/profile.png');
 
