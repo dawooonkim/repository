@@ -122,6 +122,17 @@ body {
 #input-twit:focus {
     outline: none;
 }
+
+.btn-primary {
+    background-color: rgb(29, 161, 242);
+    color: white;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    min-height: 40px;
+    border-radius: 9999px;
+}
+
 #btn-create-twit {
     display: block;
     position: absolute;
@@ -139,7 +150,19 @@ margin: 0 20px 20px 0;
     border: none;
 }
 
+.timeline-empty {
+    width: 600px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.timeline-empty > * {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
 .timeline-content {
+    display: none;
     width: 600px;
 }
 

@@ -1,4 +1,4 @@
-var btnCreateTwit = document.querySelector('#btn-create-twit');
+var btnCreateTwit = document.querySelector('.btn-create-twit');
 var inputTwit = document.querySelector('#input-twit');
 var timeLine = document.querySelector('.timeline-content');
 
@@ -8,6 +8,8 @@ btnCreateTwit.addEventListener('click', createTwit);
 
 function createTwit() {
     if(inputTwit.value.length > 0){
+        timeLine.style.display = "block";
+        document.querySelector(".timeline-empty").style.display = "none";
         var newDiv = document.createElement("div");
         var userContent = document.createTextNode(inputTwit.value);
         var newContent = document.createElement("div")
@@ -24,7 +26,6 @@ function createTwit() {
         var timeInner = document.createTextNode("· "+hour+"시 "+min+"분 "+sec+"초에 작성");
         var twitBody = document.createElement("div");
         var time = document.createElement("div");
-
 
         newProfile.setAttribute('src', 'img/profile.png');
 
