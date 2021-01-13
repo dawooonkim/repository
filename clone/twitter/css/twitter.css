@@ -14,7 +14,7 @@ body {
 }
 .menu {
     height: 100%;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
 }
 .sswer {
     flex-grow: 3;
@@ -225,4 +225,16 @@ margin: 0 20px 20px 0;
 svg {
     height: 1.75rem;
     color: rgba(255,255,255,100);
+}
+
+
+.modal {
+    display: none;
+    position: absolute;
+    top: 200px;
+    left: 500px;
+    width: 200px;
+    height: 200px;
+    z-index: 9999;
+    background-color: white;
 }

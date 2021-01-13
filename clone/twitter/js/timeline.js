@@ -3,10 +3,11 @@ var inputTwit = document.querySelector('#input-twit');
 var timeLine = document.querySelector('.timeline-content');
 
 
-
 btnCreateTwit.addEventListener('click', createTwit);
 
 function createTwit() {
+    var modal = document.querySelector('.modal');
+
     if(inputTwit.value.length > 0){
         timeLine.style.display = "block";
         document.querySelector(".timeline-empty").style.display = "none";
@@ -56,10 +57,15 @@ function createTwit() {
         timeLine.appendChild(newDiv);
 
         btnDelete.addEventListener("click",function(){
-            this.parentNode.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode.parentNode);
+            modalOpen();
+            // this.parentNode.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode.parentNode);
         })
 
         inputTwit.value = "";
+
+        function modalOpen() {
+            modal.style.display = "block";
+        }
     } else {
         alert('내용을 입력해주세요.')
     }
