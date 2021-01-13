@@ -17,8 +17,8 @@ function createTwit() {
         var newNickname = document.createElement("div");
         var userNickname = document.createTextNode("userName");
         var metaData = document.createElement("div");
-        var btnDelete = document.createElement("span");
-        var times = document.createTextNode("X");
+        var btnDelete = document.createElement("div");
+        var icTrash = document.createElement("i")
 
         var generateUnix = Date.now();
         var generateTime = new Date(generateUnix);
@@ -33,13 +33,15 @@ function createTwit() {
         newProfile.setAttribute('src', 'img/profile.png');
 
         newDiv.classList.add('single-twit');
-        twitBody.classList.add('flex-column', 'd-flex');
+        twitBody.classList.add('flex-column', 'd-flex', 'w-100');
         newProfile.classList.add('user-profile');
         newNickname.classList.add('user-nickname');
         time.classList.add('time')
         metaData.classList.add('d-flex');
+        icTrash.classList.add('far', 'fa-trash-alt');
+        btnDelete.classList.add('btn-delete');
 
-        btnDelete.appendChild(times);
+        btnDelete.appendChild(icTrash);
         time.appendChild(timeInner);
         newNickname.appendChild(userNickname);
         newContent.appendChild(userContent);
