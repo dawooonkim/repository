@@ -249,3 +249,6 @@ i {
     z-index: 9999;
     background-color: white;
 }
+.dim {
+    background-color: rgba(91, 112, 131, 0.4)
+}

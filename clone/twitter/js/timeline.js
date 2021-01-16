@@ -1,12 +1,16 @@
 var btnCreateTwit = document.querySelector('.btn-create-twit');
 var inputTwit = document.querySelector('#input-twit');
 var timeLine = document.querySelector('.timeline-content');
+var emptyState = document.querySelector('.timeline-empty');
+var twitNode;
 
-
-btnCreateTwit.addEventListener('click', createTwit);
+btnCreateTwit.addEventListener('click', function(){
+        createTwit();
+    });
 
 function createTwit() {
-    var modal = document.querySelector('.modal');
+    var modalDeleteTwit = document.querySelector('#modal-delete-twit');
+
 
     if(inputTwit.value.length > 0){
         timeLine.style.display = "block";
@@ -63,8 +67,11 @@ function createTwit() {
 
         inputTwit.value = "";
 
+        twitNode = document.querySelector('.single-twit');
+
         function modalOpen() {
-            modal.style.display = "block";
+            modalDeleteTwit.style.display = "block";
+            dim.style.display = "block";
         }
     } else {
         alert('내용을 입력해주세요.')
