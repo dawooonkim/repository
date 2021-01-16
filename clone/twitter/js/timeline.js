@@ -10,6 +10,7 @@ btnCreateTwit.addEventListener('click', function(){
 
 function createTwit() {
     var modalDeleteTwit = document.querySelector('#modal-delete-twit');
+    var dim = document.querySelector('.dim');
 
 
     if(inputTwit.value.length > 0){
@@ -62,17 +63,29 @@ function createTwit() {
 
         btnDelete.addEventListener("click",function(){
             modalOpen();
-            // this.parentNode.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode.parentNode);
+            //
         })
 
         inputTwit.value = "";
 
         twitNode = document.querySelector('.single-twit');
 
+        var btnDeleteTwitModal = document.querySelector('#modal-delete-twit .btn-warning');
+        btnDeleteTwitModal.addEventListener("click",function(){
+            // this.parentNode.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode.parentNode);
+        }
+
         function modalOpen() {
             modalDeleteTwit.style.display = "block";
             dim.style.display = "block";
         }
+        function modalClose() {
+            modalDeleteTwit.style.display = "none";
+            dim.style.display = "none";
+        }
+        dim.addEventListener("click", modalClose);
+
+
     } else {
         alert('내용을 입력해주세요.')
     }
