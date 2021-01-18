@@ -63,7 +63,8 @@ function createTwit() {
 
         btnDelete.addEventListener("click",function(){
             modalOpen();
-            //
+            var thisTwit = this.parentNode.parentNode.parentNode.parentNode;
+            // .removeChild(this.parentNode.parentNode.parentNode)
         })
 
         inputTwit.value = "";
@@ -72,9 +73,9 @@ function createTwit() {
 
         var btnDeleteTwitModal = document.querySelector('#modal-delete-twit .btn-warning');
         btnDeleteTwitModal.addEventListener("click",function(){
-            // this.parentNode.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode.parentNode);
-        }
-
+            console.log(thisTwit);
+        });
+// this.parentNode.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode.parentNode);
         function modalOpen() {
             modalDeleteTwit.style.display = "block";
             dim.style.display = "block";
