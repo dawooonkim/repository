@@ -63,7 +63,7 @@ function createTwit() {
 
         btnDelete.addEventListener("click",function(){
             modalOpen();
-            var thisTwit = this.parentNode.parentNode.parentNode.parentNode;
+            thisTwit = this.parentNode.parentNode.parentNode;
             // .removeChild(this.parentNode.parentNode.parentNode)
         })
 
@@ -73,9 +73,10 @@ function createTwit() {
 
         var btnDeleteTwitModal = document.querySelector('#modal-delete-twit .btn-warning');
         btnDeleteTwitModal.addEventListener("click",function(){
-            console.log(thisTwit);
+            thisTwit.parentNode.removeChild(thisTwit);
+            modalClose();
         });
-// this.parentNode.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode.parentNode);
+        
         function modalOpen() {
             modalDeleteTwit.style.display = "block";
             dim.style.display = "block";
