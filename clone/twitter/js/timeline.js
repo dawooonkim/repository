@@ -1,3 +1,4 @@
+var body = document.querySelector('body');
 var btnCreateTwit = document.querySelector('.btn-create-twit');
 var inputTwit = document.querySelector('#input-twit');
 var timeLine = document.querySelector('.timeline-content');
@@ -75,8 +76,13 @@ function createTwit() {
         btnDeleteTwitModal.addEventListener("click",function(){
             thisTwit.parentNode.removeChild(thisTwit);
             modalClose();
+            if(document.querySelector('.timeline-content div') === null) {
+                timeLine.style.display = "none";
+                document.querySelector(".timeline-empty").style.display = "block";
+            }
+
         });
-        
+
         function modalOpen() {
             modalDeleteTwit.style.display = "block";
             dim.style.display = "block";
