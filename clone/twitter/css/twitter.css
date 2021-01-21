@@ -110,7 +110,7 @@ body {
 
 .generate-twit {
     position: relative;
-    height: 120px;
+    height: 80px;
     border-bottom: 1px solid rgba(255, 255, 255, .1);
     padding: 20px;
 }
