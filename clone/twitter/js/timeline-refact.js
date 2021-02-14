@@ -6,10 +6,14 @@ var emptyState = document.querySelector('.timeline-empty');
 var twitNode;
 
 btnCreateTwit.addEventListener('click', function(){
+
         createTwit();
     });
 
 function createTwit() {
+    // var singleTwit = document.querySelectorAll('.single-twit');
+    // singleTwit[0].parentNode.removeChild(singleTwit[0]);
+
     var modalDeleteTwit = document.querySelector('#modal-delete-twit');
     var dim = document.querySelector('.dim');
 
@@ -18,12 +22,11 @@ function createTwit() {
         timeLine.style.display = "block";
         document.querySelector(".timeline-empty").style.display = "none";
 
-        var newDiv = document.createElement("div");
 
         var userContent = document.createTextNode(inputTwit.value);
         var newContent = document.createElement("div");
 
-        var newProfile = document.createElement("img");
+        // var newProfile = document.createElement("img");
         var newNickname = document.createElement("div");
         var userNickname = document.createTextNode("userName");
         var metaData = document.createElement("div");
@@ -40,11 +43,11 @@ function createTwit() {
         var twitBody = document.createElement("div");
         var time = document.createElement("div");
 
-        newProfile.setAttribute('src', 'img/profile.png');
+        // newProfile.setAttribute('src', 'img/profile.png');
 
-        newDiv.classList.add('single-twit');
+        // newDiv.classList.add('single-twit');
         twitBody.classList.add('flex-column', 'd-flex', 'w-100');
-        newProfile.classList.add('user-profile');
+        // newProfile.classList.add('user-profile');
         newNickname.classList.add('user-nickname');
         time.classList.add('time')
         metaData.classList.add('d-flex');
@@ -61,9 +64,8 @@ function createTwit() {
         twitBody.appendChild(metaData);
         twitBody.appendChild(newContent);
 
-        newDiv.appendChild(newProfile);
-        newDiv.appendChild(twitBody);
-        timeLine.appendChild(newDiv);
+        // newDiv.appendChild(newProfile);
+        timeLine.appendChild(twitBody);
 
         btnDelete.addEventListener("click",function(){
             modalOpen();
